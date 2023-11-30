@@ -2,26 +2,21 @@ use std::io;
 use std::process::Command;
 
 pub fn run_interface() {
-    print!("> ");
     loop {
+        print!("> ");
         let mut com = String::new();
         io::stdin()
             .read_line(&mut com)
             .expect("Failed to read input");
-        let args: Vec<&str> = com.trim().split(' ').collect();
-        if args[0] == "" {
+        let args: Vec<&str> = com.trim().split(' ').filter(|s| !s.is_empty()).collect();
+        if args.len() == 0 {
             continue;
         }
-        let mut cmd = String::from("/bin/");
-        cmd.push_str(args[0]);
-        let output = Command::new(cmd)
+        let mut process = Command::new(&args[0])
             .args(&args[1..])
-            .output()
+            .spawn()
             .expect("failed to execute process");
-        print!(
-            "{}",
-            String::from_utf8(output.stdout).expect("invalid bytes")
-        );
-        print!("> ");
+        let ecode = process.wait().expect("failed to wait on child");
+        print!("{}", ecode);
     }
 }
