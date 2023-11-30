@@ -2,6 +2,7 @@
 members = [
     "ch8",
     "ch12",
+    "rust_shell",
 ]
 
 resolver = "1"

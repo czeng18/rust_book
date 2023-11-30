@@ -1,0 +1,13 @@
+[package]
+name = "rust_shell"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[lib]
+path = "lib.rs"
+
+[[bin]]
+name = "rust_shell"
+path = "main.rs"
