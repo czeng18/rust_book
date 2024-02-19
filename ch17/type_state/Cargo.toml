@@ -1,0 +1,13 @@
+[package]
+name = "type_state"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[lib]
+path = "lib.rs"
+
+[[bin]]
+name = "type_state"
+path = "main.rs"

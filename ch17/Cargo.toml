@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "oo_state",
+    "type_state",
+]
+
+resolver = "1"

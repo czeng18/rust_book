@@ -2,6 +2,7 @@
 members = [
     "ch8",
     "ch12",
+    "ch17",
     "rust_shell",
 ]
 
