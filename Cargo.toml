@@ -2,7 +2,9 @@
 members = [
     "ch8",
     "ch12",
-    "ch17",
+    "ch17/oo_state",
+    "ch17/type_state",
+    "ch20",
     "rust_shell",
 ]
 

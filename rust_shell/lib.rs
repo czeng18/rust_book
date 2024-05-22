@@ -24,3 +24,7 @@ pub fn run_interface() {
 fn flush() {
     let _ = io::stdout().flush();
 }
+
+// pipes
+// &
+// stretch: handle subshells
